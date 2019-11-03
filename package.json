@@ -1,0 +1,84 @@
+{
+  "name": "get-node",
+  "version": "5.5.0",
+  "main": "build/src/main.js",
+  "files": [
+    "build/src",
+    "examples",
+    "!~"
+  ],
+  "bin": {
+    "get-node": "build/src/bin/main.js"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "gulp check --full"
+    }
+  },
+  "description": "Download a specific version of Node.js",
+  "keywords": [
+    "nodejs",
+    "node",
+    "download",
+    "nvm",
+    "npx",
+    "versions",
+    "versioning",
+    "exec",
+    "shell",
+    "terminal",
+    "command-line",
+    "cli",
+    "dependency-management",
+    "es6",
+    "javascript",
+    "library",
+    "npmjs",
+    "operating-system",
+    "package-manager",
+    "server"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://git.io/fj7JT",
+  "repository": "ehmicky/get-node",
+  "bugs": {
+    "url": "https://github.com/ehmicky/get-node/issues"
+  },
+  "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "dependencies": {
+    "core-js": "^3.3.6",
+    "end-of-stream": "^1.4.4",
+    "fetch-node-website": "^4.0.0",
+    "filter-obj": "^2.0.1",
+    "global-cache-dir": "^1.0.1",
+    "jest-validate": "^24.9.0",
+    "move-file": "^1.2.0",
+    "normalize-node-version": "^5.1.0",
+    "p-event": "^4.1.0",
+    "path-exists": "^4.0.0",
+    "semver": "^6.3.0",
+    "tar-fs": "^2.0.0",
+    "tmp-promise": "^2.0.2",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "@ehmicky/dev-tasks": "^0.30.52",
+    "ava": "^2.4.0",
+    "execa": "^3.2.0",
+    "get-bin-path": "^4.0.0",
+    "gulp": "^4.0.2",
+    "husky": "^3.0.9",
+    "sinon": "^7.5.0",
+    "test-each": "^1.8.0"
+  },
+  "engines": {
+    "node": ">=8.12.0"
+  }
+}
