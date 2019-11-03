@@ -1,6 +1,6 @@
 {
-  "name": "get-node",
-  "version": "5.5.0",
+  "name": "get-node-cli",
+  "version": "1.0.0",
   "main": "build/src/main.js",
   "files": [
     "build/src",
@@ -18,7 +18,7 @@
       "pre-push": "gulp check --full"
     }
   },
-  "description": "Download a specific version of Node.js",
+  "description": "Download a specific version of Node.js (CLI)",
   "keywords": [
     "nodejs",
     "node",
@@ -42,10 +42,10 @@
     "server"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://git.io/fj7JT",
-  "repository": "ehmicky/get-node",
+  "homepage": "https://git.io/Je2wX",
+  "repository": "ehmicky/get-node-cli",
   "bugs": {
-    "url": "https://github.com/ehmicky/get-node/issues"
+    "url": "https://github.com/ehmicky/get-node-cli/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "directories": {
