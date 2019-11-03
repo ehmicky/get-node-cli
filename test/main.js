@@ -33,13 +33,8 @@ each([TEST_VERSION, TEST_VERSION_RANGE], ({ title }, versionInput) => {
 // executable before cleaning it
 const REMOVE_TIMEOUT = 1e3
 
-const INVALID_MIRROR = 'https://example.com'
-
-each(
-  ['invalid_version', `--mirror=${INVALID_MIRROR} ${TEST_VERSION}`],
-  ({ title }, flags) => {
-    test(`Invalid arguments | ${title}`, async t => {
-      await t.throwsAsync(getNodeCli(flags))
-    })
-  },
-)
+each(['invalid_version'], ({ title }, flags) => {
+  test(`Invalid arguments | ${title}`, async t => {
+    await t.throwsAsync(getNodeCli(flags))
+  })
+})
