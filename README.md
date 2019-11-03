@@ -4,7 +4,7 @@
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
 
-Download a specific version of Node.js.
+Download a specific version of Node.js (CLI).
 
 This is cached: if the output directory already has a `node` executable, no
 download will be performed.
@@ -56,6 +56,9 @@ npm install -g get-node-cli
 
 `node >=8.12.0` must already be installed.
 
+To use this programmatically instead, please check
+[`get-node`](https://github.com/ehmicky/get-node).
+
 # Usage
 
 ```bash
@@ -64,9 +67,6 @@ get-node [OPTIONS] [VERSION]
 
 `VERSION` can be any [version range](https://github.com/npm/node-semver) such as
 `12`, `12.6.0` or `<12`.
-
-To use this programmatically instead, please check
-[`get-node`](https://github.com/ehmicky/get-node).
 
 ## Options
 
