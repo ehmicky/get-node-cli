@@ -1,14 +1,12 @@
 {
   "name": "get-node-cli",
   "version": "1.0.0",
-  "main": "build/src/main.js",
   "files": [
     "build/src",
-    "examples",
     "!~"
   ],
   "bin": {
-    "get-node": "build/src/bin/main.js"
+    "get-node": "build/src/bin.js"
   },
   "scripts": {
     "test": "gulp test"
