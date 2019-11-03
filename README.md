@@ -56,7 +56,7 @@ npm install -g get-node-cli
 
 `node >=8.12.0` must already be installed.
 
-To use this programmatically instead, please check
+To use this programmatically (from Node.js) instead, please check
 [`get-node`](https://github.com/ehmicky/get-node).
 
 # Usage
