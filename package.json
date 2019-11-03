@@ -18,8 +18,8 @@
   },
   "description": "Download a specific version of Node.js (CLI)",
   "keywords": [
-    "nodejs",
     "node",
+    "nodejs",
     "download",
     "nvm",
     "npx",
