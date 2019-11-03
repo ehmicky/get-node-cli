@@ -6,7 +6,7 @@
     "!~"
   ],
   "bin": {
-    "get-node": "^6.0.1"
+    "get-node": "build/src/bin.js"
   },
   "scripts": {
     "test": "gulp test"
