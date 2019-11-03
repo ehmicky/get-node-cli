@@ -1,36 +1,31 @@
 import { promisify } from 'util'
-import { execFile } from 'child_process'
+import { tmpdir } from 'os'
 
 import test from 'ava'
 import pathExists from 'path-exists'
+import execa from 'execa'
 import { each } from 'test-each'
+import del from 'del'
 
-import getNode from '../src/main.js'
+import { TEST_VERSION, TEST_VERSION_RANGE, getNodeCli } from './helpers/main.js'
 
-import {
-  TEST_VERSION,
-  getOutput,
-  removeOutput,
-  getNodeCli,
-} from './helpers/main.js'
-
-const pExecFile = promisify(execFile)
 const pSetTimeout = promisify(setTimeout)
 
-each([getNode, getNodeCli], ({ title }, getNodeFunc) => {
+each([TEST_VERSION, TEST_VERSION_RANGE], ({ title }, versionInput) => {
   test(`Downloads node | ${title}`, async t => {
-    const output = getOutput()
-    const { path, version } = await getNodeFunc(TEST_VERSION, {
-      output,
-      progress: false,
-    })
+    const id = String(Math.random()).replace('.', '')
+    const output = `${tmpdir()}/test-get-node-cli-${id}`
 
-    const { stdout } = await pExecFile(path, ['--version'])
-    t.is(stdout.trim(), `v${version}`)
+    const { path, version } = await getNodeCli(
+      `--output=${output} ${versionInput}`,
+    )
+
+    t.true(await pathExists(path))
+    const { stdout } = await execa(path, ['--version'])
+    t.is(stdout, `v${version}`)
 
     await pSetTimeout(REMOVE_TIMEOUT)
-
-    await removeOutput(path)
+    await del(output, { force: true })
   })
 })
 
@@ -38,22 +33,13 @@ each([getNode, getNodeCli], ({ title }, getNodeFunc) => {
 // executable before cleaning it
 const REMOVE_TIMEOUT = 1e3
 
-test('Returns filepath and version', async t => {
-  const output = getOutput()
-  const { path } = await getNode(TEST_VERSION, { output })
+const INVALID_MIRROR = 'https://example.com'
 
-  t.true(await pathExists(path))
-
-  await removeOutput(path)
-})
-
-each([getNode, getNodeCli], ({ title }, getNodeFunc) => {
-  test(`Can use version range | ${title}`, async t => {
-    const output = getOutput()
-    const { path } = await getNodeFunc('6', { output, progress: false })
-
-    t.true(await pathExists(path))
-
-    await removeOutput(path)
-  })
-})
+each(
+  ['invalid_version', `--mirror=${INVALID_MIRROR} ${TEST_VERSION}`],
+  ({ title }, flags) => {
+    test(`Invalid arguments | ${title}`, async t => {
+      await t.throwsAsync(getNodeCli(flags))
+    })
+  },
+)

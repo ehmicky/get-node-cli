@@ -54,28 +54,19 @@
   },
   "dependencies": {
     "core-js": "^3.3.6",
-    "end-of-stream": "^1.4.4",
-    "fetch-node-website": "^4.0.0",
     "filter-obj": "^2.0.1",
-    "global-cache-dir": "^1.0.1",
-    "jest-validate": "^24.9.0",
-    "move-file": "^1.2.0",
-    "normalize-node-version": "^5.1.0",
-    "p-event": "^4.1.0",
-    "path-exists": "^4.0.0",
-    "semver": "^6.3.0",
-    "tar-fs": "^2.0.0",
-    "tmp-promise": "^2.0.2",
+    "get-node": "^5.5.0",
     "yargs": "^14.2.0"
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.30.52",
     "ava": "^2.4.0",
+    "del": "^5.1.0",
     "execa": "^3.2.0",
     "get-bin-path": "^4.0.0",
     "gulp": "^4.0.2",
     "husky": "^3.0.9",
-    "sinon": "^7.5.0",
+    "path-exists": "^4.0.0",
     "test-each": "^1.8.0"
   },
   "engines": {

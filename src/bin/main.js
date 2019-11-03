@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { exit } from 'process'
 
-import getNode from '../main.js'
+import getNode from 'get-node'
 
 import { defineCli } from './top.js'
 import { parseOpts } from './parse.js'
