@@ -93,9 +93,10 @@ get-node [OPTIONS] [VERSION]
 
 ### --output
 
-_Alias_: `-o`<br> _Type_: `string`<br>_Default_:
-[global cache directory](https://github.com/ehmicky/global-cache-dir) such as
-`/home/user/.cache/nve/`.
+_Alias_: `-o`\
+_Type_: `string`\
+_Default_: [global cache directory](https://github.com/ehmicky/global-cache-dir)
+such as `/home/user/.cache/nve/`.
 
 Output directory for the `node` executable.
 
@@ -104,13 +105,17 @@ enables caching.
 
 ### --progress
 
-_Alias_: `-p`<br>_Type_: `boolean`<br>_Default_: `true`
+_Alias_: `-p`\
+_Type_: `boolean`\
+_Default_: `true`
 
 Whether to show a progress bar.
 
 ### --mirror
 
-_Alias_: `-m`<br>_Type_: `string`<br>_Default_: `https://nodejs.org/dist`
+_Alias_: `-m`\
+_Type_: `string`\
+_Default_: `https://nodejs.org/dist`
 
 Base URL. Can be overridden (for example `https://npm.taobao.org/mirrors/node`).
 
