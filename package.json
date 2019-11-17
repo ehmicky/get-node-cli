@@ -54,7 +54,7 @@
     "core-js": "^3.4.1",
     "filter-obj": "^2.0.1",
     "get-node": "^6.4.0",
-    "yargs": "^15.0.1"
+    "yargs": "^15.0.2"
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.30.56",
