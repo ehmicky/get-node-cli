@@ -57,7 +57,7 @@
     "yargs": "^15.0.2"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.30.56",
+    "@ehmicky/dev-tasks": "^0.30.59",
     "ava": "^2.4.0",
     "del": "^5.1.0",
     "execa": "^3.3.0",
