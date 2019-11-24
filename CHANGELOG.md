@@ -1,3 +1,9 @@
+# 1.6.0
+
+## Features
+
+- Warn when a new version is available
+
 # 1.5.0
 
 ## Features
