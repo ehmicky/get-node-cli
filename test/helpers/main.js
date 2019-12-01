@@ -3,7 +3,7 @@ import execa from 'execa'
 
 const BIN_PATH = getBinPath()
 
-export const TEST_VERSION = '6.0.0'
+export const TEST_VERSION = '6.2.1'
 export const TEST_VERSION_RANGE = '6'
 
 export const getNodeCli = async function(flags) {
