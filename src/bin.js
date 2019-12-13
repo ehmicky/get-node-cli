@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { exit, env } from 'process'
+import { exit } from 'process'
 
 import getNode from 'get-node'
 import UpdateNotifier from 'update-notifier'
@@ -25,8 +25,7 @@ const runCli = async function() {
 
 const checkUpdate = async function() {
   const { packageJson } = await readPkgUp({ cwd: __dirname, normalize: false })
-  const disabled = env.NODE_ENV === 'test'
-  UpdateNotifier({ pkg: packageJson, disabled }).notify()
+  UpdateNotifier({ pkg: packageJson }).notify()
 }
 
 runCli()
