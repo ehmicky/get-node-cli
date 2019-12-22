@@ -51,7 +51,7 @@
     "test": "test"
   },
   "dependencies": {
-    "core-js": "^3.6.0",
+    "core-js": "^3.6.1",
     "filter-obj": "^2.0.1",
     "get-node": "^7.0.0",
     "read-pkg-up": "^7.0.1",
