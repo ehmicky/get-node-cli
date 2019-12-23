@@ -74,7 +74,7 @@ $ get-node --mirror=https://npm.taobao.org/mirrors/node 8
 npm install -g get-node-cli
 ```
 
-`node >=8.12.0` must be globally installed. However any Node version can be
+`node >=10.17.0` must be globally installed. However any Node version can be
 downloaded.
 
 To use this programmatically (from Node.js) instead, please check
