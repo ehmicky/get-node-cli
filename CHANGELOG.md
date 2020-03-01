@@ -2,8 +2,8 @@
 
 ## Features
 
-- Add [`arch` option](https://github.com/ehmicky/get-node#arch) to specify the
-  CPU architecture.
+- Add [`--arch` CLI flag](https://github.com/ehmicky/get-node-cli#--arch) to
+  specify the CPU architecture.
 
 # 2.0.0
 
