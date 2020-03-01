@@ -1,3 +1,9 @@
+# 2.1.1
+
+## Bug fixes
+
+- Fix [`arch` option](https://github.com/ehmicky/get-node-cli#--arch)
+
 # 2.1.0
 
 ## Features
