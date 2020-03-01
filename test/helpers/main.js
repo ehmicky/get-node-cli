@@ -15,4 +15,4 @@ export const getNodeCli = async function(flags) {
   return { path, version }
 }
 
-const PATH_TO_VERSION_REGEXP = /([\d.]+)[/\\][^\d]+$/u
+const PATH_TO_VERSION_REGEXP = /\/(\d+\.\d+\.\d+)\//u
