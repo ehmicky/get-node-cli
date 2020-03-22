@@ -12,7 +12,7 @@ import { TEST_VERSION, TEST_VERSION_RANGE, getNodeCli } from './helpers/main.js'
 const pSetTimeout = promisify(setTimeout)
 
 each([TEST_VERSION, TEST_VERSION_RANGE], ({ title }, versionInput) => {
-  test(`Downloads node | ${title}`, async t => {
+  test(`Downloads node | ${title}`, async (t) => {
     const id = String(Math.random()).replace('.', '')
     const output = `${tmpdir()}/test-get-node-cli-${id}`
 
@@ -34,7 +34,7 @@ each([TEST_VERSION, TEST_VERSION_RANGE], ({ title }, versionInput) => {
 const REMOVE_TIMEOUT = 1e3
 
 each(['invalid_version'], ({ title }, flags) => {
-  test(`Invalid arguments | ${title}`, async t => {
+  test(`Invalid arguments | ${title}`, async (t) => {
     await t.throwsAsync(getNodeCli(flags))
   })
 })

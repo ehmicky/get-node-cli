@@ -1,6 +1,6 @@
 import filterObj from 'filter-obj'
 
-export const parseOpts = function(yargs) {
+export const parseOpts = function (yargs) {
   const {
     _: [versionRange],
     ...opts
@@ -11,7 +11,7 @@ export const parseOpts = function(yargs) {
 }
 
 // `yargs` parses major releases (e.g. `8`) as numbers
-const parseVersionRange = function(versionRange) {
+const parseVersionRange = function (versionRange) {
   if (!Number.isInteger(versionRange)) {
     return versionRange
   }
@@ -20,7 +20,7 @@ const parseVersionRange = function(versionRange) {
 }
 
 // Remove `yargs`-specific options, shortcuts and dash-cased
-const isUserOpt = function(key, value) {
+const isUserOpt = function (key, value) {
   return (
     value !== undefined &&
     !INTERNAL_KEYS.includes(key) &&
