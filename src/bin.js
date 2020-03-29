@@ -2,11 +2,11 @@
 import { exit } from 'process'
 
 import getNode from 'get-node'
-import UpdateNotifier from 'update-notifier'
 import readPkgUp from 'read-pkg-up'
+import UpdateNotifier from 'update-notifier'
 
-import { defineCli } from './top.js'
 import { parseOpts } from './parse.js'
+import { defineCli } from './top.js'
 
 // Download the Node.js binary for a specific `versionRange`
 const runCli = async function () {

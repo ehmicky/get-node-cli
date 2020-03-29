@@ -1,11 +1,11 @@
-import { promisify } from 'util'
 import { tmpdir } from 'os'
+import { promisify } from 'util'
 
 import test from 'ava'
-import pathExists from 'path-exists'
-import execa from 'execa'
-import { each } from 'test-each'
 import del from 'del'
+import execa from 'execa'
+import pathExists from 'path-exists'
+import { each } from 'test-each'
 
 import { TEST_VERSION, TEST_VERSION_RANGE, getNodeCli } from './helpers/main.js'
 
