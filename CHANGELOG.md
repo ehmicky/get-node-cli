@@ -7,7 +7,7 @@
 - Can use the `.` alias to refer to the
   [current project's Node.js version](/README.md#usage) using its `.nvmrc`,
   `.node-version` or `.naverc`. The current directory can be changed using the
-  [`cwd` option](/README.md#cwd).
+  [`--cwd` CLI flag](/README.md#--cwd).
 
 # 2.1.2
 
