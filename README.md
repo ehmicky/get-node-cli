@@ -30,6 +30,7 @@ Features include:
 - using [version ranges](#usage)
 - specifying [a mirror website](#--mirror) for nodejs.org
 - helpful error messages
+- can guess the current project's version using its [`.nvmrc`](#usage)
 
 # Example
 
@@ -55,6 +56,12 @@ $ /home/user/.cache/nve/8.16.1/x64/bin/node
 # Any version range can be used
 $ get-node 8.12.0
 $ get-node '<7'
+
+# Download current project's Node.js version using its `.nvmrc`
+$ get-node .
+
+# Download current process's Node.js version
+$ get-node _
 
 # Specify the output directory
 $ get-node --output=/home/user/.cache/node_releases/ 8
@@ -91,7 +98,12 @@ get-node [OPTIONS] [VERSION]
 ```
 
 `VERSION` can be any [version range](https://github.com/npm/node-semver) such as
-`12`, `12.6.0` or `<12`.
+`12`, `12.6.0` or `<12`, or one of the following aliases:
+
+- `_` : Current process's Node.js version
+- `.` : Node version from a `.nvmrc`, `.node-version` or `.naverc` file in the
+  current directory or any parent directory. Defaults to the current process's
+  Node.js version
 
 ## Options
 
@@ -139,6 +151,15 @@ but would like to run Node.js x32.
 All the values from
 [`process.arch`](https://nodejs.org/api/process.html#process_process_arch) are
 allowed except mips and mipsel.
+
+#### --cwd
+
+_Alias_: `-c`\
+_Type_: `string`\
+_Default_: `process.cwd()`
+
+When using the [`.` alias](#usage), start looking for a Node.js version file
+from this directory.
 
 # See also
 

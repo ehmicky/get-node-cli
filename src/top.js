@@ -34,6 +34,13 @@ The following environment variables can also be used: NODE_MIRROR, NVM_NODEJS_OR
 All the values from process.arch are allowed except mips and mipsel.
 Default: process.arch`,
   },
+  cwd: {
+    alias: 'c',
+    string: true,
+    requiresArg: true,
+    describe: `When using the '.' alias, start looking for a Node.js version file from this directory.
+Defaults to the current directory.`,
+  },
 }
 
 const USAGE = `$0 [OPTIONS...] [VERSION]
