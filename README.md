@@ -74,6 +74,13 @@ v8.16.1
 $ get-node --mirror=https://npm.taobao.org/mirrors/node 8
 /home/user/.cache/nve/8.16.1/x64/bin/node
 
+# Do not use the cached list of available Node.js versions
+$ get-node --fetch
+
+# Always use the cached list of available Node.js versions even if it's more
+# than one hour old
+$ get-node --no-fetch
+
 # Specify the CPU architecture
 $ get-node --arch=s390x 8
 /home/user/.cache/nve/8.16.1/s390x/bin/node
@@ -139,6 +146,17 @@ Base URL to retrieve Node.js binaries. Can be customized (for example
 
 The following environment variables can also be used: `NODE_MIRROR`,
 `NVM_NODEJS_ORG_MIRROR`, `N_NODE_MIRROR` or `NODIST_NODE_MIRROR`.
+
+### --fetch
+
+_Alias_: `-f`\
+_Type_: `boolean`\
+_Default_: `undefined`
+
+The list of available Node.js versions is cached for one hour by default. With:
+
+- `--fetch`: the cache will not be used
+- `--no-fetch`: the cache will be used even if it's older than one hour
 
 ### --arch
 
