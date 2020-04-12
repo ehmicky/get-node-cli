@@ -1,3 +1,13 @@
+# 2.3.0
+
+## Features
+
+- Add the [`--fetch` CLI flag](/README#--fetch) to control caching
+
+## Dependencies
+
+- Remove `core-js`
+
 # 2.2.0
 
 ## Features
