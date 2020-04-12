@@ -133,7 +133,8 @@ _Alias_: `-m`\
 _Type_: `string`\
 _Default_: `https://nodejs.org/dist`
 
-Base URL. Can be overridden (for example `https://npm.taobao.org/mirrors/node`).
+Base URL to retrieve Node.js binaries. Can be customized (for example
+`https://npm.taobao.org/mirrors/node`).
 
 The following environment variables can also be used: `NODE_MIRROR`,
 `NVM_NODEJS_ORG_MIRROR`, `N_NODE_MIRROR` or `NODIST_NODE_MIRROR`.
