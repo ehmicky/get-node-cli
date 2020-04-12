@@ -57,7 +57,7 @@ $ /home/user/.cache/nve/8.16.1/x64/bin/node
 $ get-node 8.12.0
 $ get-node '<7'
 
-# Download current project's Node.js version using its `.nvmrc`
+# Download current project's Node.js version using its `.nvmrc` or `package.json`
 $ get-node .
 
 # Download current process's Node.js version
@@ -100,10 +100,11 @@ get-node [OPTIONS] [VERSION]
 `VERSION` can be any [version range](https://github.com/npm/node-semver) such as
 `12`, `12.6.0` or `<12`, or one of the following aliases:
 
-- `_` : Current process's Node.js version
+- `*`: Latest available Node version
 - `.` : Node version from a `.nvmrc`, `.node-version` or `.naverc` file in the
   current directory or any parent directory. Defaults to the current process's
-  Node.js version
+  Node version
+- `_` : Current process's Node version
 
 ## Options
 
