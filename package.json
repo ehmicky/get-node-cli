@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "filter-obj": "^2.0.1",
-    "get-node": "^8.0.0",
+    "get-node": "^8.0.1",
     "read-pkg-up": "^7.0.1",
     "update-notifier": "^4.1.0",
     "yargs": "^15.3.1"
