@@ -1,3 +1,9 @@
+# 2.3.1
+
+## Dependencies
+
+- Fix removing `core-js`
+
 # 2.3.0
 
 ## Features
