@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "files": [
     "build/src",
-    "!~"
+    "!*~"
   ],
   "bin": {
     "get-node": "build/src/bin.js"
