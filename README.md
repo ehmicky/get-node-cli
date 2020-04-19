@@ -30,7 +30,8 @@ Features include:
 - using [version ranges](#usage)
 - specifying [a mirror website](#--mirror) for nodejs.org
 - helpful error messages
-- can guess the current project's version using its [`.nvmrc`](#usage)
+- can guess the current project's version using its
+  [`.nvmrc` or `package.json` (`engines.node` field)](#usage)
 
 # Example
 
@@ -55,15 +56,16 @@ $ /home/user/.cache/nve/8.16.1/x64/bin/node
 
 # Any version range can be used
 $ get-node 8.12.0
-$ get-node '<7'
+$ get-node "<7"
 
 # Download latest Node.js version
 $ get-node latest
-$ get-node l
 
-# Download current project's Node.js version using its `.nvmrc` or `package.json`
-$ get-node current
-$ get-node c
+# Download latest LTS Node.js version
+$ get-node lts
+
+# Download current project's Node.js version using its `.nvmrc` or `package.json` (`engines.node` field)
+$ get-node now
 
 # Specify the output directory
 $ get-node --output=/home/user/.cache/node_releases/ 8
@@ -109,10 +111,15 @@ get-node [OPTIONS] [VERSION]
 `VERSION` can be any [version range](https://github.com/npm/node-semver) such as
 `12`, `12.6.0` or `<12`, or one of the following aliases:
 
-- `latest` or `l`: Latest available Node version
-- `current` or `c`: Node version from a `.nvmrc`, `.node-version` or `.naverc`
-  file in the current directory or any parent directory. Defaults to the current
-  process's Node version
+- `latest`: Latest available Node version
+- `lts`: Latest LTS Node version
+- `now`: Node version from any [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc)
+  or
+  [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
+  in the current directory, parent directories or home directory.
+  [Some additional files](https://github.com/ehmicky/preferred-node-version/blob/master/README.md)
+  used by other Node.js version managers are also searched for. Defaults to the
+  current process's Node version.
 
 ## Options
 
@@ -179,7 +186,7 @@ _Alias_: `-c`\
 _Type_: `string`\
 _Default_: `process.cwd()`
 
-When using the [`.` alias](#usage), start looking for a Node.js version file
+When using the [`now` alias](#usage), start looking for a Node.js version file
 from this directory.
 
 # See also
