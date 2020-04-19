@@ -1,3 +1,9 @@
+# 5.0.0
+
+## Breaking changes
+
+- Rename the [alias `now`](/README.md#usage) to `here`
+
 # 4.0.0
 
 ## Breaking changes
