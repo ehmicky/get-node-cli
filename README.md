@@ -65,7 +65,7 @@ $ get-node latest
 $ get-node lts
 
 # Download current project's Node.js version using its `.nvmrc` or `package.json` (`engines.node` field)
-$ get-node now
+$ get-node here
 
 # Specify the output directory
 $ get-node --output=/home/user/.cache/node_releases/ 8
@@ -113,7 +113,7 @@ get-node [OPTIONS] [VERSION]
 
 - `latest`: Latest available Node version
 - `lts`: Latest LTS Node version
-- `now`: Node version from any [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc)
+- `here`: Node version from any [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc)
   or
   [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
   in the current directory, parent directories or home directory.
@@ -186,7 +186,7 @@ _Alias_: `-c`\
 _Type_: `string`\
 _Default_: `process.cwd()`
 
-When using the [`now` alias](#usage), start looking for a Node.js version file
+When using the [`here` alias](#usage), start looking for a Node.js version file
 from this directory.
 
 # See also

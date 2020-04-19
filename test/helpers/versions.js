@@ -1,5 +1,5 @@
 export const FULL_VERSION = '6.2.1'
 export const VERSION_RANGE = '6'
 export const VERSION_ALIAS = 'lts'
-export const VERSION_NOW = 'now'
+export const VERSION_HERE = 'here'
 export const INVALID_VERSION = 'invalid_version'

@@ -11,12 +11,12 @@ import {
   FULL_VERSION,
   VERSION_RANGE,
   VERSION_ALIAS,
-  VERSION_NOW,
+  VERSION_HERE,
   INVALID_VERSION,
 } from './helpers/versions.js'
 
 each(
-  [FULL_VERSION, VERSION_RANGE, VERSION_ALIAS, VERSION_NOW],
+  [FULL_VERSION, VERSION_RANGE, VERSION_ALIAS, VERSION_HERE],
   ({ title }, versionInput) => {
     test(`Downloads node | ${title}`, async (t) => {
       const id = String(Math.random()).replace('.', '')
