@@ -45,7 +45,7 @@ Default: process.arch`,
     alias: 'c',
     string: true,
     requiresArg: true,
-    describe: `When using the '.' alias, start looking for a Node.js version file from this directory.
+    describe: `When using the 'now' alias, start looking for a Node.js version file from this directory.
 Defaults to the current directory.`,
   },
 }
