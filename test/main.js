@@ -1,5 +1,4 @@
 import { tmpdir } from 'os'
-import { promisify } from 'util'
 
 import test from 'ava'
 import del from 'del'
@@ -7,33 +6,39 @@ import execa from 'execa'
 import pathExists from 'path-exists'
 import { each } from 'test-each'
 
-import { TEST_VERSION, TEST_VERSION_RANGE, getNodeCli } from './helpers/main.js'
+import { getNodeCli } from './helpers/main.js'
+import {
+  FULL_VERSION,
+  VERSION_RANGE,
+  VERSION_ALIAS,
+  VERSION_NOW,
+  INVALID_VERSION,
+} from './helpers/versions.js'
 
-const pSetTimeout = promisify(setTimeout)
+each(
+  [FULL_VERSION, VERSION_RANGE, VERSION_ALIAS, VERSION_NOW],
+  ({ title }, versionInput) => {
+    test(`Downloads node | ${title}`, async (t) => {
+      const id = String(Math.random()).replace('.', '')
+      const output = `${tmpdir()}/test-get-node-cli-${id}`
 
-each([TEST_VERSION, TEST_VERSION_RANGE], ({ title }, versionInput) => {
-  test(`Downloads node | ${title}`, async (t) => {
-    const id = String(Math.random()).replace('.', '')
-    const output = `${tmpdir()}/test-get-node-cli-${id}`
+      const { path, version } = await getNodeCli(
+        `--output=${output} ${versionInput}`,
+      )
 
-    const { path, version } = await getNodeCli(
-      `--output=${output} ${versionInput}`,
-    )
+      t.true(await pathExists(path))
+      const { stdout } = await execa(path, ['--version'])
+      t.is(stdout, `v${version}`)
 
-    t.true(await pathExists(path))
-    const { stdout } = await execa(path, ['--version'])
-    t.is(stdout, `v${version}`)
+      try {
+        await del(output, { force: true })
+        // Windows sometimes fails due to lock files
+      } catch {}
+    })
+  },
+)
 
-    await pSetTimeout(REMOVE_TIMEOUT)
-    await del(output, { force: true })
-  })
-})
-
-// We need to wait a little for Windows to release the lock on the `node`
-// executable before cleaning it
-const REMOVE_TIMEOUT = 1e3
-
-each(['invalid_version'], ({ title }, flags) => {
+each([INVALID_VERSION], ({ title }, flags) => {
   test(`Invalid arguments | ${title}`, async (t) => {
     await t.throwsAsync(getNodeCli(flags))
   })
