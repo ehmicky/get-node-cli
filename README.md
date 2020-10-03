@@ -119,7 +119,7 @@ get-node [OPTIONS] [VERSION]
 - `global`: Global Node version
   - Using the home directory [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc) or
     [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
-  - [Some additional files](https://github.com/ehmicky/preferred-node-version/blob/master/README.md)
+  - [Some additional files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
     used by other Node.js version managers are also searched for
   - If nothing is found, defaults to the current process's Node version
 - `local`: Current directory's Node version
@@ -127,7 +127,7 @@ get-node [OPTIONS] [VERSION]
     [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc),
     [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
     (or
-    [additional files](https://github.com/ehmicky/preferred-node-version/blob/master/README.md))
+    [additional files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md))
   - Defaults to the `global` version
 
 ## Options

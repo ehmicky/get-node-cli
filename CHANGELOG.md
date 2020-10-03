@@ -28,7 +28,7 @@
 - Aliases `c` and `current` renamed to `now`
 - The [alias `now`](/README.md#usage) now takes into account `package.json`
   `engines.node` field and
-  [additional files](https://github.com/ehmicky/preferred-node-version/blob/master/README.md)
+  [additional files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
   used by other Node.js version managers.
 - Alias `l` removed: please use `latest` instead
 
