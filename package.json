@@ -54,7 +54,7 @@
     "filter-obj": "^2.0.1",
     "get-node": "^11.0.1",
     "read-pkg-up": "^7.0.1",
-    "update-notifier": "^5.0.0",
+    "update-notifier": "^5.0.1",
     "yargs": "^16.1.0"
   },
   "devDependencies": {
