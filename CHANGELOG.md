@@ -1,3 +1,9 @@
+# 6.0.2
+
+## Bug fixes
+
+- Fix issue with `SIGINT` handling
+
 # 6.0.1
 
 ## Bug fixes
