@@ -62,7 +62,6 @@
     "del": "^6.0.0",
     "execa": "^5.0.0",
     "get-bin-path": "^5.1.0",
-    "husky": "^4.3.8",
     "path-exists": "^4.0.0",
     "test-each": "^2.0.1"
   },
