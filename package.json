@@ -2,8 +2,8 @@
   "name": "get-node-cli",
   "version": "6.0.2",
   "files": [
-    "build/src",
-    "!*~"
+    "build/src/**/*.{js,ts,map,json,sh,md}",
+    "examples/**/*.{js,ts,map,json,sh,md}"
   ],
   "bin": {
     "get-node": "build/src/bin.js"
