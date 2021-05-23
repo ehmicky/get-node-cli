@@ -98,7 +98,7 @@ $ get-node --arch=s390x 8
 npm install -g get-node-cli
 ```
 
-`node >=10.17.0` must be globally installed. However any Node version can be
+`node >=12.20.0` must be globally installed. However any Node version can be
 downloaded.
 
 To use this programmatically (from Node.js) instead, please check
