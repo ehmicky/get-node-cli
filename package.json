@@ -56,7 +56,7 @@
     "get-node": "^11.0.2",
     "read-pkg-up": "^8.0.0",
     "update-notifier": "^5.0.1",
-    "yargs": "^16.2.0"
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^1.0.4",
