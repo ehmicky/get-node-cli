@@ -37,20 +37,20 @@ Features include:
 ```bash
 # Download Node.js latest release
 $ get-node
-/home/user/.cache/nve/12.10.0/x64/bin/node
+/home/user/.cache/nve/16.3.0/x64/bin/node
 
-$ /home/user/.cache/nve/12.10.0/x64/bin/node
-Welcome to Node.js v12.10.0.
+$ /home/user/.cache/nve/16.3.0/x64/bin/node
+Welcome to Node.js v16.3.0.
 Type ".help" for more information.
 > .exit
 
 # Download a specific Node.js release
 $ get-node 8
-/home/user/.cache/nve/8.16.1/x64/bin/node
+/home/user/.cache/nve/8.17.0/x64/bin/node
 
-$ /home/user/.cache/nve/8.16.1/x64/bin/node
+$ /home/user/.cache/nve/8.17.0/x64/bin/node
 > process.version
-'v8.16.1'
+'v8.17.0'
 > .exit
 
 # Any version range can be used
@@ -71,14 +71,14 @@ $ get-node local
 
 # Specify the output directory
 $ get-node --output=/home/user/.cache/node_releases/ 8
-/home/user/.cache/node_releases/8.16.1/x64/bin/node
+/home/user/.cache/node_releases/8.17.0/x64/bin/node
 
-$ /home/user/.cache/node_releases/8.16.1/x64/bin/node --version
-v8.16.1
+$ /home/user/.cache/node_releases/8.17.0/x64/bin/node --version
+v8.17.0
 
 # Use a mirror website
 $ get-node --mirror=https://npm.taobao.org/mirrors/node 8
-/home/user/.cache/nve/8.16.1/x64/bin/node
+/home/user/.cache/nve/8.17.0/x64/bin/node
 
 # Do not use the cached list of available Node.js versions
 $ get-node --fetch
@@ -89,7 +89,7 @@ $ get-node --no-fetch
 
 # Specify the CPU architecture
 $ get-node --arch=s390x 8
-/home/user/.cache/nve/8.16.1/s390x/bin/node
+/home/user/.cache/nve/8.17.0/s390x/bin/node
 ```
 
 # Install
