@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "filter-obj": "^2.0.1",
-    "get-node": "^11.0.2",
+    "get-node": "^12.0.0",
     "read-pkg-up": "^8.0.0",
     "update-notifier": "^5.0.1",
     "yargs": "^17.0.1"
