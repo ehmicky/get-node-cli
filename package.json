@@ -57,7 +57,7 @@
     "@ehmicky/dev-tasks": "^1.0.34",
     "del": "^6.0.0",
     "execa": "^5.1.1",
-    "get-bin-path": "^6.0.0",
+    "get-bin-path": "^6.0.1",
     "path-exists": "^4.0.0",
     "test-each": "^3.0.1"
   },
