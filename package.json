@@ -1,6 +1,6 @@
 {
   "name": "get-node-cli",
-  "version": "6.0.2",
+  "version": "7.0.0",
   "type": "module",
   "files": [
     "build/src/**/*.{js,ts,map,json,sh,md}",
