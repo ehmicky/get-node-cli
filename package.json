@@ -12,11 +12,6 @@
   "scripts": {
     "test": "gulp test"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "gulp -LL check --full"
-    }
-  },
   "description": "Download a specific version of Node.js (CLI)",
   "keywords": [
     "node",
