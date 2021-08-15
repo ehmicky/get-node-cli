@@ -5,7 +5,7 @@ import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
 export const defineCli = function () {
-  return yargs(hideBin(argv)).options(CONFIG).usage(USAGE).strict()
+  return yargs(hideBin(argv)).options(CONFIG).usage(USAGE).strictOptions()
 }
 
 const CONFIG = {
