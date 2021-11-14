@@ -56,7 +56,7 @@
   "devDependencies": {
     "@ehmicky/dev-tasks": "^1.0.56",
     "del": "^6.0.0",
-    "execa": "^5.1.1",
+    "execa": "^6.0.0",
     "get-bin-path": "^6.0.1",
     "path-exists": "^5.0.0",
     "test-each": "^3.0.1"
