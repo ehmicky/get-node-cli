@@ -1,11 +1,11 @@
-import execa from 'execa'
+import { execaCommand } from 'execa'
 import { getBinPath } from 'get-bin-path'
 
 const BIN_PATH = getBinPath()
 
 export const getNodeCli = async function (flags) {
   const binPath = await BIN_PATH
-  const { stdout: path } = await execa.command(
+  const { stdout: path } = await execaCommand(
     `node ${binPath} --no-progress ${flags}`,
   )
   const [, version] = PATH_TO_VERSION_REGEXP.exec(path)

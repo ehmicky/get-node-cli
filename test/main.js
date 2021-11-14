@@ -2,7 +2,7 @@ import { tmpdir } from 'os'
 
 import test from 'ava'
 import del from 'del'
-import execa from 'execa'
+import { execa } from 'execa'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
 
