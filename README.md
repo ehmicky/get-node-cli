@@ -77,7 +77,7 @@ $ /home/user/.cache/node_releases/8.17.0/x64/bin/node --version
 v8.17.0
 
 # Use a mirror website
-$ get-node --mirror=https://npm.taobao.org/mirrors/node 8
+$ get-node --mirror=https://npmmirror.com/mirrors/node 8
 /home/user/.cache/nve/8.17.0/x64/bin/node
 
 # Do not use the cached list of available Node.js versions
@@ -158,7 +158,7 @@ _Type_: `string`\
 _Default_: `https://nodejs.org/dist`
 
 Base URL to retrieve Node.js binaries. Can be customized (for example
-`https://npm.taobao.org/mirrors/node`).
+`https://npmmirror.com/mirrors/node`).
 
 The following environment variables can also be used: `NODE_MIRROR`,
 `NVM_NODEJS_ORG_MIRROR`, `N_NODE_MIRROR` or `NODIST_NODE_MIRROR`.

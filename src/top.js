@@ -26,7 +26,7 @@ Defaults to a global cache directory such as /home/user/.cache/nve/.`,
     string: true,
     requiresArg: true,
     describe: `Base URL. Defaults to 'https://nodejs.org/dist'.
-Can be customized (for example "https://npm.taobao.org/mirrors/node").
+Can be customized (for example "https://npmmirror.com/mirrors/node").
 
 The following environment variables can also be used: NODE_MIRROR, NVM_NODEJS_ORG_MIRROR, N_NODE_MIRROR or NODIST_NODE_MIRROR.`,
   },
