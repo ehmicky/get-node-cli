@@ -1,7 +1,7 @@
+import { rm } from 'fs/promises'
 import { tmpdir } from 'os'
 
 import test from 'ava'
-import del from 'del'
 import { execa } from 'execa'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
@@ -32,7 +32,7 @@ each(
       t.is(stdout, `v${version}`)
 
       try {
-        await del(output, { force: true })
+        await rm(output, { recursive: true })
         // Windows sometimes fails due to lock files
       } catch {}
     })
