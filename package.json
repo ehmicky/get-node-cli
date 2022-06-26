@@ -50,7 +50,7 @@
     "filter-obj": "^3.0.0",
     "get-node": "^13.1.0",
     "read-pkg-up": "^9.1.0",
-    "update-notifier": "^5.0.1",
+    "update-notifier": "^6.0.2",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
