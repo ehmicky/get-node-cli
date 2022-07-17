@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { dirname } from 'path'
-import { exit } from 'process'
 import { fileURLToPath } from 'url'
 
 import getNode from 'get-node'
+import handleCliError from 'handle-cli-error'
 import { readPackageUp } from 'read-pkg-up'
 import UpdateNotifier from 'update-notifier'
 
@@ -20,8 +20,7 @@ const runCli = async function () {
     const { path } = await getNode(versionRange, { progress: true, ...opts })
     console.log(path)
   } catch (error) {
-    console.error(error.message)
-    exit(1)
+    handleCliError(error, { short: true })
   }
 }
 
