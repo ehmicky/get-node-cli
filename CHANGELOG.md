@@ -1,3 +1,9 @@
+# 7.1.0
+
+## Features
+
+- Improve [error handling](https://github.com/ehmicky/handle-cli-error)
+
 # 7.0.0
 
 ## Breaking changes
