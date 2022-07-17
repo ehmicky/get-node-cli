@@ -1,3 +1,16 @@
+# 7.1.1
+
+## Bug fixes
+
+The `7.1.0` release introduced a breaking change (dropping Node 12 support). The
+`7.1.1` release reverts it.
+
+# 7.1.0
+
+## Features
+
+- Improve [error handling](https://github.com/ehmicky/handle-cli-error)
+
 # 7.0.0
 
 ## Breaking changes
