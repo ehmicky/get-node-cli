@@ -1,3 +1,13 @@
+# 8.0.0
+
+## Breaking changes
+
+- Minimal supported Node.js version is now `14.18.0`
+
+## Features
+
+- Improve [error handling](https://github.com/ehmicky/handle-cli-error)
+
 # 7.1.1
 
 ## Bug fixes
