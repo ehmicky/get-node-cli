@@ -1,3 +1,9 @@
+# 8.2.0
+
+## Features
+
+- Improve error handling
+
 # 8.1.0
 
 ## Features
