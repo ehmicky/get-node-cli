@@ -20,7 +20,7 @@ const runCli = async function () {
     const { path } = await getNode(versionRange, { progress: true, ...opts })
     console.log(path)
   } catch (error) {
-    handleCliError(error, { short: true })
+    handleCliError(error, { stack: false })
   }
 }
 
