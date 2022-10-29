@@ -3,7 +3,7 @@
   "version": "8.2.0",
   "type": "module",
   "files": [
-    "build/src/**/*.{js,d.ts,json}"
+    "build/src/**/*.{js,json}"
   ],
   "bin": {
     "get-node": "build/src/bin.js"
