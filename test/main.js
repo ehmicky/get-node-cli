@@ -1,5 +1,5 @@
-import { rm } from 'fs/promises'
-import { tmpdir } from 'os'
+import { rm } from 'node:fs/promises'
+import { tmpdir } from 'node:os'
 
 import test from 'ava'
 import { execa } from 'execa'

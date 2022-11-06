@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
+import { dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import getNode from 'get-node'
 import handleCliError from 'handle-cli-error'
