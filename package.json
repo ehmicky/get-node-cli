@@ -3,7 +3,9 @@
   "version": "8.2.0",
   "type": "module",
   "files": [
-    "build/src/**/*.{js,json}"
+    "build/src/**/*.{js,json}",
+    "!build/src/**/*.test.js",
+    "!build/src/{helpers,fixtures}/**/*.js"
   ],
   "bin": {
     "get-node": "build/src/bin.js"
