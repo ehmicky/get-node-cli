@@ -6,7 +6,7 @@ import { execa } from 'execa'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
 
-import { getNodeCli } from './helpers/main.js'
+import { getNodeCli } from './helpers/main.test.js'
 import {
   FULL_VERSION,
   VERSION_RANGE,
@@ -14,7 +14,7 @@ import {
   VERSION_LOCAL,
   VERSION_GLOBAL,
   INVALID_VERSION,
-} from './helpers/versions.js'
+} from './helpers/versions.test.js'
 
 each(
   [FULL_VERSION, VERSION_RANGE, VERSION_ALIAS, VERSION_LOCAL, VERSION_GLOBAL],
