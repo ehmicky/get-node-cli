@@ -2,19 +2,29 @@ import { rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 
 import test from 'ava'
-import { execa } from 'execa'
+import { execa, execaCommand } from 'execa'
+import { getBinPath } from 'get-bin-path'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
 
-import { getNodeCli } from './helpers/main.test.js'
-import {
-  FULL_VERSION,
-  VERSION_RANGE,
-  VERSION_ALIAS,
-  VERSION_LOCAL,
-  VERSION_GLOBAL,
-  INVALID_VERSION,
-} from './helpers/versions.test.js'
+const getNodeCli = async function (flags) {
+  const binPath = await BIN_PATH
+  const { stdout: path } = await execaCommand(
+    `node ${binPath} --no-progress ${flags}`,
+  )
+  const [, version] = PATH_TO_VERSION_REGEXP.exec(path)
+  return { path, version }
+}
+
+const BIN_PATH = getBinPath()
+const PATH_TO_VERSION_REGEXP = /[/\\/](\d+\.\d+\.\d+)[\\/]/u
+
+const FULL_VERSION = '6.2.1'
+const VERSION_RANGE = '6'
+const VERSION_ALIAS = 'lts'
+const VERSION_LOCAL = 'local'
+const VERSION_GLOBAL = 'global'
+const INVALID_VERSION = 'invalid_version'
 
 each(
   [FULL_VERSION, VERSION_RANGE, VERSION_ALIAS, VERSION_LOCAL, VERSION_GLOBAL],
