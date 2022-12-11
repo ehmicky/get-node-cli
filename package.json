@@ -60,7 +60,7 @@
     "execa": "^6.1.0",
     "get-bin-path": "^8.0.0",
     "path-exists": "^5.0.0",
-    "test-each": "^5.7.0"
+    "test-each": "^5.7.1"
   },
   "engines": {
     "node": ">=14.18.0"
