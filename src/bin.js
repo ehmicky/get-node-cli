@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import getNode from 'get-node'
 import handleCliError from 'handle-cli-error'
 import { readPackageUp } from 'read-pkg-up'
-import UpdateNotifier from 'update-notifier'
+import updateNotifier from 'update-notifier'
 
 import { parseOpts } from './parse.js'
 import { defineCli } from './top.js'
@@ -28,7 +28,7 @@ const runCli = async function () {
 const checkUpdate = async function () {
   const cwd = dirname(fileURLToPath(import.meta.url))
   const { packageJson } = await readPackageUp({ cwd, normalize: false })
-  UpdateNotifier({ pkg: packageJson }).notify()
+  updateNotifier({ pkg: packageJson }).notify()
 }
 
 await runCli()
