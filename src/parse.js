@@ -1,6 +1,6 @@
 import { excludeKeys } from 'filter-obj'
 
-export const parseOpts = function (yargs) {
+export const parseOpts = (yargs) => {
   const {
     _: [versionRange],
     ...opts
@@ -11,7 +11,7 @@ export const parseOpts = function (yargs) {
 }
 
 // `yargs` parses major releases (e.g. `8`) as numbers
-const parseVersionRange = function (versionRange) {
+const parseVersionRange = (versionRange) => {
   if (!Number.isInteger(versionRange)) {
     return versionRange
   }
@@ -20,13 +20,10 @@ const parseVersionRange = function (versionRange) {
 }
 
 // Remove `yargs`-specific options, shortcuts and dash-cased
-const isInternalOpt = function (key, value) {
-  return (
-    value === undefined ||
-    INTERNAL_KEYS.has(key) ||
-    key.length === 1 ||
-    key.includes('-')
-  )
-}
+const isInternalOpt = (key, value) =>
+  value === undefined ||
+  INTERNAL_KEYS.has(key) ||
+  key.length === 1 ||
+  key.includes('-')
 
 const INTERNAL_KEYS = new Set(['help', 'version', '_', '$0'])

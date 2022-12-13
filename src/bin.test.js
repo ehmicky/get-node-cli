@@ -7,7 +7,7 @@ import { getBinPath } from 'get-bin-path'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
 
-const getNodeCli = async function (flags) {
+const getNodeCli = async (flags) => {
   const binPath = await BIN_PATH
   const { stdout: path } = await execaCommand(
     `node ${binPath} --no-progress ${flags}`,

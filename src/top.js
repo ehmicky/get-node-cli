@@ -4,9 +4,8 @@ import yargs from 'yargs'
 // eslint-disable-next-line n/file-extension-in-import
 import { hideBin } from 'yargs/helpers'
 
-export const defineCli = function () {
-  return yargs(hideBin(argv)).options(CONFIG).usage(USAGE).strictOptions()
-}
+export const defineCli = () =>
+  yargs(hideBin(argv)).options(CONFIG).usage(USAGE).strictOptions()
 
 const CONFIG = {
   output: {
