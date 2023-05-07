@@ -1,6 +1,6 @@
 {
   "name": "get-node-cli",
-  "version": "8.2.0",
+  "version": "9.0.0",
   "type": "module",
   "files": [
     "build/src/**/*.{js,json}",
