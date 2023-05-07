@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "filter-obj": "^5.1.0",
-    "get-node": "^13.6.0",
+    "get-node": "^14.0.0",
     "handle-cli-error": "^3.1.1",
     "read-pkg-up": "^9.1.0",
     "update-notifier": "^6.0.2",
