@@ -69,6 +69,9 @@ $ get-node global
 # Download current directory's Node.js version using its `.nvmrc` or `package.json` (`engines.node` field)
 $ get-node local
 
+# Download Node.js version from a specific file like `.nvmrc` or `package.json`
+$ get-node /path/to/.nvmrc
+
 # Specify the output directory
 $ get-node --output=/home/user/.cache/node_releases/ 8
 /home/user/.cache/node_releases/8.17.0/x64/bin/node
@@ -110,24 +113,29 @@ To use this programmatically (from Node.js) instead, please check
 get-node [OPTIONS] [VERSION]
 ```
 
-`VERSION` can be any [version range](https://github.com/npm/node-semver) such as
-`12`, `12.6.0` or `<12`, or one of the following aliases:
+`VERSION` can be:
 
+- any [version range](https://github.com/npm/node-semver) such as `12`, `12.6.0`
+  or `<12`
 - `latest`: Latest available Node version
 - `lts`: Latest LTS Node version
 - `global`: Global Node version
   - Using the home directory [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc) or
     [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
-  - [Some additional files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
+  - [Some similar files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
     used by other Node.js version managers are also searched for
   - If nothing is found, defaults to the current process's Node version
 - `local`: Current directory's Node version
   - Using the current directory or parent directories
     [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc),
     [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
-    (or
-    [additional files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md))
+    or
+    [similar files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
   - Defaults to the `global` version
+- a file path towards a [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc),
+  [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
+  or
+  [similar files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
 
 ## Options
 

@@ -1,3 +1,17 @@
+# 9.1.0
+
+## Features
+
+- The Node.js version can now be specified as a file path to a
+  [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc),
+  [`package.json` (`engines.node` field)](https://docs.npmjs.com/files/package.json#engines)
+  or
+  [similar files](https://github.com/ehmicky/preferred-node-version/blob/main/README.md).
+
+```sh
+$ get-node /path/to/.nvmrc
+```
+
 # 9.0.0
 
 ## Breaking changes

@@ -1,11 +1,15 @@
 import { rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
+import { fileURLToPath } from 'node:url'
 
 import test from 'ava'
 import { execa, execaCommand } from 'execa'
 import { getBinPath } from 'get-bin-path'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
+
+const BIN_PATH = getBinPath()
+const NVMRC_PATH = fileURLToPath(new URL('fixtures/.nvmrc', import.meta.url))
 
 const getNodeCli = async (flags) => {
   const binPath = await BIN_PATH
@@ -16,7 +20,6 @@ const getNodeCli = async (flags) => {
   return { path, version }
 }
 
-const BIN_PATH = getBinPath()
 const PATH_TO_VERSION_REGEXP = /[/\\/](\d+\.\d+\.\d+)[\\/]/u
 
 const FULL_VERSION = '6.2.1'
@@ -27,7 +30,14 @@ const VERSION_GLOBAL = 'global'
 const INVALID_VERSION = 'invalid_version'
 
 each(
-  [FULL_VERSION, VERSION_RANGE, VERSION_ALIAS, VERSION_LOCAL, VERSION_GLOBAL],
+  [
+    FULL_VERSION,
+    VERSION_RANGE,
+    VERSION_ALIAS,
+    VERSION_LOCAL,
+    VERSION_GLOBAL,
+    NVMRC_PATH,
+  ],
   ({ title }, versionInput) => {
     test(`Downloads node | ${title}`, async (t) => {
       const id = String(Math.random()).replace('.', '')
