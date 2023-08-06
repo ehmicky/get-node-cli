@@ -38,7 +38,10 @@
   ],
   "license": "Apache-2.0",
   "homepage": "https://www.github.com/ehmicky/get-node-cli",
-  "repository": "ehmicky/get-node-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehmicky/get-node-cli.git"
+  },
   "bugs": {
     "url": "https://github.com/ehmicky/get-node-cli/issues"
   },
