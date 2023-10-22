@@ -54,7 +54,7 @@
     "get-node": "^14.2.1",
     "handle-cli-error": "^4.0.2",
     "read-pkg-up": "^10.1.0",
-    "update-notifier": "^6.0.2",
+    "update-notifier": "^7.0.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
