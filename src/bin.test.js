@@ -1,5 +1,6 @@
 import { rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import test from 'ava'
@@ -41,7 +42,7 @@ each(
   ({ title }, versionInput) => {
     test(`Downloads node | ${title}`, async (t) => {
       const id = String(Math.random()).replace('.', '')
-      const output = `${tmpdir()}/test-get-node-cli-${id}`
+      const output = join(tmpdir(), `test-get-node-cli-${id}`)
 
       const { path, version } = await getNodeCli(
         `--output=${output} ${versionInput}`,
