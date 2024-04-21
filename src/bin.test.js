@@ -14,7 +14,11 @@ const NVMRC_PATH = fileURLToPath(new URL('fixtures/.nvmrc', import.meta.url))
 
 const getNodeCli = async (flags) => {
   const binPath = await BIN_PATH
-  const { stdout: path } = await execa('node', [binPath, '--no-progress', ...flags])
+  const { stdout: path } = await execa('node', [
+    binPath,
+    '--no-progress',
+    ...flags,
+  ])
   const [, version] = PATH_TO_VERSION_REGEXP.exec(path)
   return { path, version }
 }
@@ -42,7 +46,10 @@ each(
       const id = String(Math.random()).replace('.', '')
       const output = join(tmpdir(), `test-get-node-cli-${id}`)
 
-      const { path, version } = await getNodeCli([`--output=${output}`, versionInput])
+      const { path, version } = await getNodeCli([
+        `--output=${output}`,
+        versionInput,
+      ])
 
       t.true(await pathExists(path))
       const { stdout } = await execa(path, ['--version'])
