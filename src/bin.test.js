@@ -23,8 +23,8 @@ const getNodeCli = async (flags) => {
 
 const PATH_TO_VERSION_REGEXP = /[/\\/](\d+\.\d+\.\d+)[\\/]/u
 
-const FULL_VERSION = '6.2.1'
-const VERSION_RANGE = '6'
+const FULL_VERSION = '16.0.0'
+const VERSION_RANGE = '16'
 const VERSION_ALIAS = 'lts'
 const VERSION_LOCAL = 'local'
 const VERSION_GLOBAL = 'global'
