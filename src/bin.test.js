@@ -4,7 +4,7 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import test from 'ava'
-import { execa } from 'execa'
+import { execa, execaNode } from 'execa'
 import { getBinPath } from 'get-bin-path'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
@@ -13,9 +13,7 @@ const BIN_PATH = getBinPath()
 const NVMRC_PATH = fileURLToPath(new URL('fixtures/.nvmrc', import.meta.url))
 
 const getNodeCli = async (flags) => {
-  const binPath = await BIN_PATH
-  const { stdout: path } = await execa('node', [
-    binPath,
+  const { stdout: path } = await execaNode(await BIN_PATH, [
     '--no-progress',
     ...flags,
   ])
