@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 import getNode from 'get-node'
 import handleCliError from 'handle-cli-error'
-import { readPackageUp } from 'read-pkg-up'
+import { readPackageUp } from 'read-package-up'
 import updateNotifier from 'update-notifier'
 
 import { parseOpts } from './parse.js'
