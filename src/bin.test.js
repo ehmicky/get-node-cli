@@ -4,8 +4,8 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import test from 'ava'
-import spawn from 'nano-spawn'
 import { getBinPath } from 'get-bin-path'
+import spawn from 'nano-spawn'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
 
