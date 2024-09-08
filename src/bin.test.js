@@ -4,7 +4,7 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import test from 'ava'
-import { execa, execaNode } from 'execa'
+import spawn from 'nano-spawn'
 import { getBinPath } from 'get-bin-path'
 import { pathExists } from 'path-exists'
 import { each } from 'test-each'
@@ -13,7 +13,8 @@ const BIN_PATH = getBinPath()
 const NVMRC_PATH = fileURLToPath(new URL('fixtures/.nvmrc', import.meta.url))
 
 const getNodeCli = async (flags) => {
-  const { stdout: path } = await execaNode(await BIN_PATH, [
+  const { stdout: path } = await spawn('node', [
+    await BIN_PATH,
     '--no-progress',
     ...flags,
   ])
@@ -50,7 +51,7 @@ each(
       ])
 
       t.true(await pathExists(path))
-      const { stdout } = await execa(path, ['--version'])
+      const { stdout } = await spawn(path, ['--version'])
       t.is(stdout, `v${version}`)
 
       try {
