@@ -58,7 +58,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^3.0.11",
+    "@ehmicky/dev-tasks": "^3.0.12",
     "get-bin-path": "^11.0.0",
     "nano-spawn": "^0.2.0",
     "path-exists": "^5.0.0",
