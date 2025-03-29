@@ -1,3 +1,9 @@
+# 10.0.2
+
+## Documentation
+
+- Improve documentation in `README.md`
+
 # 10.0.1
 
 ## Dependencies
