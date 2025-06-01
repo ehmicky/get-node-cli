@@ -1,3 +1,9 @@
+# 10.0.3
+
+## Dependencies
+
+- Upgrade `tar-fs` dependency
+
 # 10.0.2
 
 ## Documentation
