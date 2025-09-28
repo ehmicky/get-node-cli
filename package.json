@@ -52,7 +52,7 @@
   "dependencies": {
     "filter-obj": "^6.1.0",
     "get-node": "^15.0.4",
-    "handle-cli-error": "^6.0.0",
+    "handle-cli-error": "^6.1.0",
     "read-package-up": "^11.0.0",
     "update-notifier": "^7.3.1",
     "yargs": "^17.7.2"
